@@ -1,0 +1,72 @@
+///
+/// A version of the media object that vertically aligns the text
+/// with modifier classes to change the alignment.
+///
+/// @name flag
+/// @group objects
+///
+/// @example
+///     <div class="flag [flag--top flag--bottom flag--rev]">
+///         <div class="flag__img">
+///             <img src="" alt="">
+///         </div>
+///         <div class="flag__body">
+///             <p></p>
+///         </div>
+///     </div>
+///
+
+.flag {
+    display: table;
+    width: 100%;
+    margin-bottom: $base-spacing-unit;
+}
+
+    .flag__img,
+    .flag__body {
+        display: table-cell;
+        vertical-align: middle;
+
+        .flag--top & {
+            vertical-align: top;
+        }
+
+        .flag--bottom & {
+            vertical-align: bottom;
+        }
+
+    }
+
+    .flag__img {
+        padding-right: $base-spacing-unit;
+
+        > img {
+            display: block;
+            max-width: none;
+        }
+
+        .flag--rev & {
+            padding-right: 0;
+            padding-left: $base-spacing-unit;
+        }
+
+    }
+
+    .flag__body {
+        width: 100%;
+    }
+
+    ///
+    /// Use $half-spacing-unit inside .islet
+    ///
+    .islet {
+        .flag {
+            margin-bottom: $half-spacing-unit;
+        }
+        .flag__img {
+            padding-right: $half-spacing-unit;
+        }
+        .flag__img--rev {
+            padding-left: $half-spacing-unit;
+        }
+    }

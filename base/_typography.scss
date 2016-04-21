@@ -1,0 +1,51 @@
+///
+/// Base font styles that are a little prettier that what normalize.css gives.
+/// You would have had to override these styles anyway so why not have a crack
+/// at giving you what you need here. Any new design patterns we see in terms of
+/// typography should be reflected here.
+///
+/// The heading classes have been added here as it seems more appropriate than
+/// in objects or even generic.
+///
+
+body {
+    background: $base-background-color;
+    color: $base-font-color;
+    font-family: $base-font-family;
+    font-feature-settings: "kern", "liga", "pnum";
+    line-height: $base-line-height;
+}
+
+h1, .alpha, %alpha,
+h2, .beta, %beta,
+h3, .gamma, %gamma,
+h4, .delta, %delta,
+h5, .epsilon, %epsilon,
+h6, .zeta, %zeta {
+    font-family: $secondary-font-family;
+}
+
+.lead, %lead {
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 $half-spacing-unit;
+}
+
+a {
+    color: $action-color;
+}
+
+ul,
+ol {
+    margin: 0 0 $half-spacing-unit;
+    padding: 0 0 0 $base-spacing-unit;
+}
+
+img,
+picture {
+    max-width: 100%;
+    margin: 0;
+}

@@ -1,0 +1,50 @@
+///
+/// The default type and border properties (colours, sizing, font) and
+/// well as the default spacing measurement that is used for the grid
+/// gutters and components default padding/margins.
+///
+/// @name Defaults
+/// @group settings
+///
+
+///
+/// Default typography styles
+///
+$base-font-family: Helvetica, sans-serif !default;
+$base-line-height: 1.5 !default;
+
+$secondary-font-family: Georgia, serif !default;
+$secondary-line-height: 1.2 !default;
+
+///
+/// Default font colors
+///
+$base-font-color: getColour('grey', 'dark') !default;
+$action-color: getColour('blue') !default;
+
+///
+/// Default border styles
+///
+$base-border-radius: 3px !default;
+$base-border-color: getColour('grey', 'light') !default;
+$base-border: 1px solid $base-border-color !default;
+
+///
+/// Base background colours
+///
+$base-background-color: #fff !default;
+$secondary-background-color: getColour('grey', 'light') !default;
+
+///
+/// Base notification colours
+///
+$info-color: getColour('blue') !default;
+$success-color: getColour('green') !default;
+$warning-color: getColour('yellow') !default;
+$danger-color: getColour('red') !default;
+
+///
+/// Base spacing units
+///
+$base-spacing-unit: $base-line-height * 1em !default;
+$half-spacing-unit: $base-spacing-unit / 2 !default;

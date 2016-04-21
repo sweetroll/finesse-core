@@ -1,0 +1,63 @@
+///
+/// Place any image and text-like content side-by-side.
+/// http://stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+///
+/// @name media
+/// @group objects
+///
+/// @example
+///     <div class="media">
+///         <img class="media__img [media__img--rev]" src="" alt="">
+///         <p class="media__body">
+///             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+///             incididunt ut labore et dolore magna aliqua.
+///         </p>
+///     </div>
+///
+
+.media {
+    @extend %cf;
+    display: block;
+    margin-bottom: $base-spacing-unit;
+}
+
+    .media__img {
+        float: left;
+        margin-right: $base-spacing-unit;
+    }
+
+    .media__img--rev {
+        float: right;
+        margin-left: $base-spacing-unit;
+    }
+
+        .media__img img,
+        .media__img--rev img {
+            display: block;
+        }
+
+    .media__body {
+        overflow: hidden;
+
+        &,
+        > :last-child {
+            margin-bottom:0;
+        }
+    }
+
+    ///
+    /// Use $half-spacing-unit inside .islet
+    ///
+    .islet {
+        .media {
+            margin-bottom: $half-spacing-unit;
+        }
+
+        .media__img {
+            margin-right: $half-spacing-unit;
+        }
+
+        .media__img--rev {
+            margin-left: $half-spacing-unit;
+        }
+    }
