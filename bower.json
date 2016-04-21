@@ -1,5 +1,5 @@
 {
-  "name": "finesse.css",
+  "name": "finesse-core",
   "version": "1.0.0",
   "description": "CSS toolkit based on Inuit.css",
   "main": "_finesse.scss",
