@@ -16,7 +16,7 @@
 ///
 
 .media {
-    @extend %cf;
+    @include clearfix($extend: true);
     display: block;
     margin-bottom: $base-spacing-unit;
 }

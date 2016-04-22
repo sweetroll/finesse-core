@@ -10,13 +10,23 @@
 ///     <p>This <span class="loz">here</span> is a lozenge!</p>
 ///
 
-.loz {
-    display:inline-block;
-    padding: 0 0.5em;
-    text-align: center;
-    background-color: $base-font-color;
-    color: #fff;
-    border-radius: $base-border-radius;
+@mixin lozenge($color, $extend: true) {
+    background-color: $color;
 
-    @include colour-it;
+    @include mixin-dryer('lozenge', $extend) {
+        display: inline-block;
+        padding: 0 .5em;
+        text-align: center;
+        color: #fff;
+        border-radius: $base-border-radius;
+    }
 }
+
+// WILL WORK WHEN MIXIN INTERPOLATION IS FIXED IN SASS
+// @include colour-it('.loz', 'lozenge');
+
+.loz          { @include lozenge($base-font-color) }
+.loz--info    { @include lozenge($info-color) }
+.loz--success { @include lozenge($success-color) }
+.loz--warning { @include lozenge($warning-color) }
+.loz--danger  { @include lozenge($danger-color) }

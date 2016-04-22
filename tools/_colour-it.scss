@@ -1,30 +1,34 @@
 ///
-/// Mixin that will take the parent selector and create modifier classes
-/// for each colour in your application's palette. In this version
-/// of the mixin the modifier will only change the background colour but if
-/// we can enhance it to pass in other properties this could be very handy.
+/// Mixin that will take a selector and a mixin name to create modifier classes
+/// for each colour in your application's palette. The mixin would have to take
+/// a colour as its only dynamic argument.
 ///
 /// @name colour-it
 /// @group tools
+/// @param {string} $prefix - base BEM class to create each modifier class from.
+/// @param {string} $mixin - name of mixin that taks a colour as an argument.
 /// @return {css} colour modifier classes nested under the object
 ///
 /// @example
-///     .object {
-///         @include colour-it;
-///     }
+///     @include colour-it('.btn', 'button');
 ///
 
-@mixin colour-it() {
+// WILL WORK WHEN MIXIN INTERPOLATION IS FIXED IN SASS
+
+@mixin colour-it($prefix, $mixin) {
     @each $colour, $tones in $palette-merged {
         @each $key, $value in $tones {
             @if $key == 'base' {
-                &--#{$colour} {
-                    background-color: $value;
-                }
-            }
 
-            &--#{$colour}-#{$key} {
-                background-color: $value;
+                #{$prefix}--#{$colour} {
+                    @call($mixin, $value);
+                }
+
+            } @else {
+
+                #{$prefix}--#{$colour}-#{$key} {
+                    @call($mixin, $value);
+                }
             }
         }
     }

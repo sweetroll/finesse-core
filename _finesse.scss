@@ -9,9 +9,8 @@
 /// Generic
 /// Normalize.css and low specificty global styles.
 ///
-@import "generic/box-sizing";
-@import "generic/normalize";
-@import "generic/clearfix";
+@import "bower_components/sass-toolkit/stylesheets/toolkit/reset";
+@import "bower_components/sass-toolkit/stylesheets/toolkit/clearfix";
 
 ///
 /// Base

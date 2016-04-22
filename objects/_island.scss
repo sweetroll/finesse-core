@@ -13,7 +13,7 @@
 
 .island,
 .islet {
-    @extend .cf;
+    @include clearfix($extend: true);
     display: block;
 }
 

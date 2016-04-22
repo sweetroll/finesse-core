@@ -24,7 +24,7 @@
 ///
 
  .stat-group {
-    @extend .cf;
+    @include clearfix($extend: true);
     margin-left: -$base-spacing-unit;
 }
 
