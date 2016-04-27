@@ -4,7 +4,7 @@
   "description": "CSS toolkit based on Inuit.css",
   "main": "_finesse.scss",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "sass-toolkit": "^2.10.0"
   }
 }
