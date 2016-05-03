@@ -23,29 +23,11 @@ h4, .delta, %delta,
 h5, .epsilon, %epsilon,
 h6, .zeta, %zeta {
     font-family: $secondary-font-family;
-}
-
-.lead, %lead {
-    font-size: 1.25em;
-    font-weight: bold;
-}
-
-p {
-    margin: 0 0 $half-spacing-unit;
+    line-height: $secondary-line-height;
 }
 
 a {
     color: $action-color;
-}
-
-ul,
-ol {
-    margin: 0 0 $half-spacing-unit;
-    padding: 0 0 0 $base-spacing-unit;
-}
-
-ul {
-    list-style-type: disc;
 }
 
 img,
