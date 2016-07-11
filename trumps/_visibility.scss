@@ -13,7 +13,7 @@
         display: none !important;
 
         @include media-query(#{$key}) {
-            display: block !important;
+            display: initial !important;
         }
 
         &.grid__item {
