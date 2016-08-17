@@ -23,12 +23,7 @@
 ///    </div>
 ///
 
- .stat-group {
-    @include clearfix($extend: true);
-    margin-left: -$base-spacing-unit;
-}
-
-    .stat {
+    .stats {
         display: flex;
         flex-direction: column;
         float: left;
@@ -43,7 +38,7 @@
         }
     }
 
-        .stat__title {
+        .stats__title {
             margin: 0;
             order: 2;
             font-weight: normal;
@@ -51,7 +46,7 @@
             text-transform: uppercase;
         }
 
-        .stat__value {
+        .stats__value {
             margin-left: 0;
             order: 1;
             font-weight: bold;

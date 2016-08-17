@@ -8,12 +8,16 @@
 /// in objects or even generic.
 ///
 
-body {
-    background: $base-background-color;
-    color: $base-font-color;
+html {
+    font-size: $base-font-size;
     font-family: $base-font-family;
     font-feature-settings: "kern", "liga", "pnum";
     line-height: $base-line-height;
+}
+
+body {
+    background: $base-background-color;
+    color: $base-font-color;
 }
 
 h1, .alpha, %alpha,
@@ -30,8 +34,10 @@ a {
     color: $action-color;
 }
 
+embed,
 img,
-picture {
-    max-width: 100%;
-    margin: 0;
+object,
+video {
+  max-width: 100%;
+  height: auto;
 }

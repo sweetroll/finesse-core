@@ -1,0 +1,28 @@
+///
+/// Harry Robert's px to rem converter.
+///
+/// @name rem
+/// @group tools
+/// @params {string} $value - Pixel value
+///
+/// @example
+///     .heading-style {
+///         font-size: rem(14px);
+///     }
+///
+
+@function rem($value) {
+
+  @if (type-of($value) == number) {
+
+    @if (unit($value) != "px") {
+      @error "`#{$value}` needs to be a pixel value.";
+    }
+
+  } @else {
+    @error "`#{$value}` needs to be a number.";
+  }
+
+  @return $value / $base-font-size * 1rem;
+
+}
