@@ -43,7 +43,7 @@ $secondary-background-color: getColour('grey', 'light') !default;
 ///
 /// Default notification colours
 ///
-$info-color: getColour('blue') !default;
+$info-color: $base-font-color !default;
 $success-color: getColour('green') !default;
 $warning-color: getColour('yellow') !default;
 $danger-color: getColour('red') !default;
@@ -51,5 +51,5 @@ $danger-color: getColour('red') !default;
 ///
 /// Default spacing units
 ///
-$base-spacing-unit: $base-line-height * 1em !default;
+$base-spacing-unit: $base-line-height * 1rem !default;
 $half-spacing-unit: $base-spacing-unit / 2 !default;
