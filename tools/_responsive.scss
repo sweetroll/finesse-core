@@ -22,3 +22,14 @@
         @warn "Breakpoint '#{$media-query}' does not exist";
     }
 }
+
+///
+/// An alias of media-query because it's painful to write 1000 times in a project
+///
+/// @name       mq
+/// @group      tools
+/// @see        media-query
+///
+@mixin mq($media-query) {
+    @include media-query($media-query)
+}
