@@ -31,5 +31,7 @@
 /// @see        media-query
 ///
 @mixin mq($media-query) {
-    @include media-query($media-query)
+    @include media-query($media-query) {
+        @content;
+    }
 }
