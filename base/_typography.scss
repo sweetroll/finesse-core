@@ -20,16 +20,6 @@ body {
     color: $base-font-color;
 }
 
-h1, .alpha, %alpha,
-h2, .beta, %beta,
-h3, .gamma, %gamma,
-h4, .delta, %delta,
-h5, .epsilon, %epsilon,
-h6, .zeta, %zeta {
-    font-family: $secondary-font-family;
-    line-height: $secondary-line-height;
-}
-
 a {
     color: $action-color;
 }
