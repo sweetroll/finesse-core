@@ -34,7 +34,6 @@
         .flag--bottom & {
             vertical-align: bottom;
         }
-
     }
 
     .flag__img {
@@ -49,11 +48,6 @@
             padding-right: 0;
             padding-left: $base-spacing-unit;
         }
-
-    }
-
-    .flag__body {
-        width: 100%;
     }
 
     ///
@@ -63,9 +57,11 @@
         .flag {
             margin-bottom: $half-spacing-unit;
         }
+
         .flag__img {
             padding-right: $half-spacing-unit;
         }
+
         .flag__img--rev {
             padding-left: $half-spacing-unit;
         }
