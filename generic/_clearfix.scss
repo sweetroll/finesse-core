@@ -4,8 +4,8 @@
 /// over and over in your markup.
 ///
 
-.cf,
-%cf {
+%cf,
+.cf {
     &:after {
         content: "";
         display: table;

@@ -1,0 +1,15 @@
+///
+/// Objects
+/// Common patterns for the creation of more complex components. Objects
+/// will rarely me be used without modification and are most commonly included
+/// via the `@extend` directive.
+///
+@import "objects/arrow";
+@import "objects/block-list";
+@import "objects/flag";
+@import "objects/grid";
+@import "objects/island";
+@import "objects/media";
+@import "objects/nav";
+@import "objects/split";
+@import "objects/stats";

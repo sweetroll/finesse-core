@@ -1,10 +1,16 @@
 {
-  "name": "finesse-core",
-  "version": "2.0.2",
-  "description": "CSS toolkit based on Inuit.css",
-  "main": "_finesse.scss",
-  "license": "MIT",
-  "dependencies": {
-    "sass-toolkit": "^2.10.0"
-  }
+    "name": "finesse-core",
+    "version": "2.1.0",
+    "description": "CSS toolkit based on Inuit.css/ITCSS",
+    "main": [
+        "_palette.scss",
+        "_settings.scss",
+        "_tools.scss",
+        "_generic.scss",
+        "_base.scss",
+        "_objects.scss",
+        "_trumps.scss"
+    ],
+    "license": "MIT",
+    "dependencies": {}
 }

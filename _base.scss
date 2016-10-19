@@ -1,0 +1,10 @@
+///
+/// Base
+/// Our default styling of the most commonly used HTML tags. It uses a modified
+/// version of Bourbon Bitters to add opinionated base styles which our designs
+/// should be aware of.
+///
+/// As with the entire framework, any default styling that is continually
+/// overwritten should be re-evaluated.
+///
+@import "base/typography";
