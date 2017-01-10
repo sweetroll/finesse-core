@@ -17,10 +17,10 @@
 ///
 
 $breakpoints: (
-    palm: '(max-width: 480px)',
-    lap: '(min-width: 481px) and (max-width: 767px)',
-    portable: '(max-width: 767px)',
-    lap-and-up: '(min-width: 481px)',
-    desk: '(min-width: 768px)',
-    desk-wide: '(min-width: 1200px)'
+    palm: '(max-width: 47.938em)',
+    lap: '(min-width: 48em) and (max-width: 63.938em)',
+    portable: '(max-width: 63.938em)',
+    lap-and-up: '(min-width: 48em)',
+    desk: '(min-width: 64em)',
+    desk-wide: '(min-width: 90em)'
 ) !default;
