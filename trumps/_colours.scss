@@ -8,21 +8,21 @@
         @if $key == 'base' {
 
             .bg--#{$colour} {
-                background: $value;
+                background: $value !important;
             }
 
             .text--#{$colour} {
-                color: $value;
+                color: $value !important;
             }
 
         } @else {
 
             .bg--#{$colour}-#{$key} {
-                background: $value;
+                background: $value !important;
             }
 
             .text--#{$colour}-#{$key} {
-                color: $value;
+                color: $value !important;
             }
 
         }
