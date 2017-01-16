@@ -1,6 +1,6 @@
 {
     "name": "finesse-core",
-    "version": "2.2.0",
+    "version": "2.2.1",
     "description": "CSS toolkit based on Inuit.css/ITCSS",
     "main": [
         "_palette.scss",
