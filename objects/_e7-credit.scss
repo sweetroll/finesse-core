@@ -1,0 +1,32 @@
+///
+/// Evolution 7 credit link
+///
+/// @name e7-credit
+/// @group object
+///
+/// @example
+///     <div class="e7-credit">
+///         site by
+///         <a class="e7-credit__link"
+///             {% if craft.request.getSegment(1) != '' %} rel="nofollow" {% endif %}
+///             target="_blank"
+///             rel="noopener"
+///             href="http://www.evolution7.com.au">
+///             evolution7
+///         </a>
+///     </div>
+///
+
+.e7-credit {
+    font-size: 12px;
+    line-height: 1.25;
+    font-family: Arial, sans-serif;
+    color: getColour('grey');
+}
+.e7-credit__link {
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

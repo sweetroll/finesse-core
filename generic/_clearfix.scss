@@ -4,11 +4,14 @@
 /// over and over in your markup.
 ///
 
-%cf,
-.cf {
+@mixin clearfix {
     &:after {
         content: "";
         display: table;
         clear: both;
     }
+}
+
+.cf {
+    @include clearfix;
 }
