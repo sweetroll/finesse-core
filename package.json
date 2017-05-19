@@ -1,0 +1,14 @@
+{
+"name": "finesse-core",
+"version": "1.0.6",
+"description": "CSS toolkit based on Inuit.css/ITCSS",
+"repository": {
+"type": "git",
+"url": "git+https://github.com/sweetroll/finesse-core.git"
+},
+"author": "Evolution 7",
+"license": "MIT",
+"bugs": {
+"url": "https://github.com/sweetroll/finesse-core/issues"
+}
+}
