@@ -1,6 +1,6 @@
 {
   "name": "finesse-core",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "CSS toolkit based on Inuit.css",
   "main": "_finesse.scss",
   "license": "MIT",
