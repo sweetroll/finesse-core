@@ -6,16 +6,11 @@ h1, .alpha, %alpha {
     margin: 0;
     font-size: 2em;
     line-height: 1.25;
+    font-weight: 400;
     font-family: $secondary-font-family;
 
-    @include media-query(lap) {
-        font-size: 2.5em;
-        line-height: 1.125;
-    }
-
-    @include media-query(desk) {
+    @include media-query(lap-and-up) {
         font-size: 3em;
-        line-height: 1.05;
     }
 
     .wysiwyg-output & {
@@ -25,17 +20,13 @@ h1, .alpha, %alpha {
 
 h2, .beta, %beta {
     margin: 0;
-    font-size: 1.625em;
-    line-height: 1.15384615;
+    font-size: 1.75em;
+    line-height: 1.25;
+    font-weight: 400;
     font-family: $secondary-font-family;
 
-    @include media-query(lap) {
-        font-size: 2em;
-        line-height: 1.25;
-    }
-
-    @include media-query(desk) {
-        font-size: 2.25em;
+    @include media-query(lap-and-up) {
+        font-size: 2.5em;
         line-height: 1.25;
     }
 
@@ -46,18 +37,13 @@ h2, .beta, %beta {
 
 h3, .gamma, %gamma {
     margin: 0;
-    font-size: 1.375em;
-    line-height: 1.13636364;
+    font-size: 1.5em;
+    line-height: 1.25;
+    font-weight: 400;
     font-family: $secondary-font-family;
 
-    @include media-query(lap) {
-        font-size: 1.5em;
-        line-height: 1.25;
-    }
-
-    @include media-query(desk) {
-        font-size: 1.75em;
-        line-height: 1.25;
+    @include media-query(lap-and-up) {
+        font-size: 2em;
     }
 
     .wysiwyg-output & {
@@ -67,12 +53,13 @@ h3, .gamma, %gamma {
 
 h4, .delta, %delta {
     margin: 0;
-    font-size: 1.125em;
-    line-height: 1.11111111;
+    font-size: 1.25em;
+    line-height: 1.25;
+    font-weight: 400;
     font-family: $secondary-font-family;
 
-    @include media-query(lap) {
-        line-height: 1.22222222;
+    @include media-query(lap-and-up) {
+        font-size: 1.5em;
     }
 
     .wysiwyg-output & {
@@ -80,10 +67,22 @@ h4, .delta, %delta {
     }
 }
 
-h5, .epsilon, %epsilon,
+h5, .epsilon, %epsilon {
+    margin: 0;
+    font-size: 1.25em;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: $secondary-font-family;
+
+    .wysiwyg-output & {
+        margin: 0.5em 0;
+    }
+}
+
 h6, .zeta, %zeta {
     margin: 0;
     font-size: 1em;
+    font-weight: 400;
     font-family: $secondary-font-family;
 
     .wysiwyg-output & {
@@ -120,15 +119,5 @@ blockquote {
     }
     > *:last-child {
         margin-bottom: 0;
-    }
-}
-
-
-img {
-    display: block;
-
-    picture & {
-        width: 100%;
-        height: auto;
     }
 }
