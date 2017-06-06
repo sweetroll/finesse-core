@@ -12,6 +12,7 @@
     }
 }
 
+%btn,
 .btn {
     display: inline-block;
     padding: 0.5em 1em;
@@ -30,6 +31,7 @@
     }
 }
 
+%btn,
 .btn { @include btn($action-color) }
 .btn--info { @include btn($info-color) }
 .btn--success { @include btn($success-color) }

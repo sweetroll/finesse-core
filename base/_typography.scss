@@ -14,7 +14,7 @@ h1, .alpha, %alpha {
     }
 
     .wysiwyg-output & {
-        margin: 0.5em 0;
+        margin: 1em 0 0.5em;
     }
 }
 
@@ -31,7 +31,7 @@ h2, .beta, %beta {
     }
 
     .wysiwyg-output & {
-        margin: 0.5em 0;
+        margin: 1em 0 0.5em;
     }
 }
 
@@ -47,7 +47,7 @@ h3, .gamma, %gamma {
     }
 
     .wysiwyg-output & {
-        margin: 0.5em 0;
+        margin: 1em 0 0.5em;
     }
 }
 
@@ -63,7 +63,7 @@ h4, .delta, %delta {
     }
 
     .wysiwyg-output & {
-        margin: 0.5em 0;
+        margin: 1em 0 0.5em;
     }
 }
 
@@ -75,7 +75,7 @@ h5, .epsilon, %epsilon {
     font-family: $secondary-font-family;
 
     .wysiwyg-output & {
-        margin: 0.5em 0;
+        margin: 1em 0 0.5em;
     }
 }
 
@@ -86,7 +86,7 @@ h6, .zeta, %zeta {
     font-family: $secondary-font-family;
 
     .wysiwyg-output & {
-        margin: 0.5em 0;
+        margin: 1em 0 0.5em;
     }
 }
 
@@ -95,21 +95,6 @@ p {
 
     .wysiwyg-output & {
         margin: 1em 0;
-    }
-}
-
-blockquote {
-    margin: 0;
-    font-size: 1.25em;
-    line-height: 1.25;
-
-    @include media-query(lap) {
-        font-size: 1.5em;
-        line-height: 1.45833333;
-    }
-
-    .wysiwyg-output & {
-        margin: 0.5em 0;
     }
 }
 
