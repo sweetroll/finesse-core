@@ -94,7 +94,14 @@ p {
     margin: 0;
 
     .wysiwyg-output & {
-        margin: 1em 0;
+        margin: 1.5em 0;
+    }
+}
+
+li {
+    .wysiwyg-output & {
+        display: list-item;
+        margin-left: 1.2em;
     }
 }
 

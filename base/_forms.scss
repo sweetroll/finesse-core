@@ -23,7 +23,6 @@ textarea {
   font-size: 16px;
 }
 
-textarea,
 input[type="email"],
 input[type="number"],
 input[type="password"],
@@ -38,7 +37,8 @@ input[type="datetime-local"],
 input[type="month"],
 input[type="time"],
 input[type="week"],
-select {
+select,
+textarea {
   appearance: none;
   background-color: $base-background-color;
   border: $base-border;

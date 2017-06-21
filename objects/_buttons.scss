@@ -2,6 +2,11 @@
     border-color: $color;
     background-color: $color;
 
+    &:hover {
+        background-color: darken($color, 15%);
+        border-color: darken($color, 15%);
+    }
+
     &.btn--ghost {
         color: $color;
 
@@ -12,7 +17,6 @@
     }
 }
 
-%btn,
 .btn {
     display: inline-block;
     padding: 0.5em 1em;
@@ -31,7 +35,6 @@
     }
 }
 
-%btn,
 .btn { @include btn($action-color) }
 .btn--info { @include btn($info-color) }
 .btn--success { @include btn($success-color) }
@@ -45,7 +48,7 @@
 }
 
 .btn--large {
-    font-size: 1.15rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
