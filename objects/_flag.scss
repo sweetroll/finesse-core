@@ -1,6 +1,6 @@
 ///
-/// A version of the media object that vertically aligns the text
-/// with modifier classes to change the alignment.
+/// A 2 column image/text layout that has modifies to control the
+/// vertical alignment of the text.
 ///
 /// @name flag
 /// @group objects
@@ -17,52 +17,34 @@
 ///
 
 .flag {
-    display: table;
-    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-column-gap: $base-spacing-unit;
+    grid-row-gap: $base-spacing-unit;
     margin-bottom: $base-spacing-unit;
+
+    @include media-query(lap-and-up) {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-    .flag__img,
-    .flag__body {
-        display: table-cell;
-        vertical-align: middle;
-
-        .flag--top & {
-            vertical-align: top;
-        }
-
-        .flag--bottom & {
-            vertical-align: bottom;
-        }
-    }
-
     .flag__img {
-        padding-right: $base-spacing-unit;
-
-        > img {
-            display: block;
-            max-width: none;
-        }
-
-        .flag--rev & {
-            padding-right: 0;
-            padding-left: $base-spacing-unit;
+        img {
+            width: 100%;
         }
     }
 
-    ///
-    /// Use $half-spacing-unit inside .islet
-    ///
-    .islet {
-        .flag {
-            margin-bottom: $half-spacing-unit;
-        }
+    .flag--top {
+        align-items: start;
+    }
 
-        .flag__img {
-            padding-right: $half-spacing-unit;
-        }
+    .flag--bottom {
+        align-items: end;
+    }
 
-        .flag__img--rev {
-            padding-left: $half-spacing-unit;
+    .flag--rev {
+        .flag__body {
+            order: -1;
         }
     }

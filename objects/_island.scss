@@ -11,23 +11,14 @@
 ///     </div>
 ///
 
-.island,
-.islet {
+.island {
     @include clearfix;
     display: block;
-}
-
-.island {
     margin-bottom: $base-spacing-unit;
     padding: $base-spacing-unit;
-}
 
-    .island > :last-child,
-    .islet > :last-child {
+    > :last-child {
         margin-bottom: 0;
     }
-
-.islet {
-    margin-bottom: $half-spacing-unit;
-    padding: $half-spacing-unit;
 }
+

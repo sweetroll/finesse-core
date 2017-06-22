@@ -16,49 +16,32 @@
 ///
 
 .media {
-    @include clearfix;
-    display: block;
+    display: flex;
+    align-items: flex-start;
     margin-bottom: $base-spacing-unit;
 }
 
     .media__img {
-        float: left;
         margin-right: $base-spacing-unit;
     }
 
-    .media__img--rev {
-        float: right;
-        margin-right: 0;
-        margin-left: $base-spacing-unit;
-    }
-
-        .media__img img,
-        .media__img--rev img {
-            display: block;
-        }
-
     .media__body {
-        overflow: hidden;
+        flex: 1;
 
-        &,
         > :last-child {
             margin-bottom:0;
         }
     }
 
-    ///
-    /// Use $half-spacing-unit inside .islet
-    ///
-    .islet {
-        .media {
-            margin-bottom: $half-spacing-unit;
-        }
+.media--rev {
+    flex-direction: row-reverse;
 
-        .media__img {
-            margin-right: $half-spacing-unit;
-        }
-
-        .media__img--rev {
-            margin-left: $half-spacing-unit;
-        }
+    .media__img {
+        margin-right: 0;
+        margin-left: $base-spacing-unit;
     }
+}
+
+.media--middle {
+    align-items: center;
+}
