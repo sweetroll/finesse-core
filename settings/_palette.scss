@@ -72,9 +72,8 @@ $palette-default: (
 $palette-merged: map-merge($palette-default, $palette);
 
 ///
-/// The function used to fetch valid colour values from the $palletes and $palette-default data maps. Function
-/// location is currently in `settings/_colours.scss` as other settings files require this function, it throws
-/// a error due to late declaration.
+/// Shortcode for map-deep-get - function used to fetch valid colour values from the $palletes and
+/// $palette-default data maps.
 ///
 /// @name       getColour
 /// @group      tools
@@ -88,16 +87,7 @@ $palette-merged: map-merge($palette-default, $palette);
 ///     color: getColour('blue');
 ///
 @function getColour($palette, $tone: 'base') {
-    @if map-has-key($palette-merged, $palette) {
-        @if map-has-key(map-get($palette-merged, $palette), $tone) {
-            @return map-get(map-get($palette-merged, $palette), $tone);
-        } @else {
-            @warn "Palette '#{$palette}' does not contain '#{$tone}' to";
-        }
-
-    } @else {
-        @warn "Palette '#{$palette}' does not exist";
-    }
+    @return map-deep-get($palette-merged, $palette, $tone);
 }
 
 ///
@@ -110,3 +100,4 @@ $palette-merged: map-merge($palette-default, $palette);
 @function getColor($palette, $tone: 'base') {
     @return getColour($palette, $tone);
 }
+

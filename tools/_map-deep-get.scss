@@ -1,0 +1,43 @@
+///
+/// The function used to fetch valid colour values from the a sass data map. Although it can be
+/// used within an app, it is recommended to create shorthands that hard code the library name
+/// for greater context for developers.
+///
+/// @name       fetchFromLibrary
+/// @group      tools
+/// @param      {string} $library - A reference to an available library with a valid structure.
+/// @param      {string} $palette - A reference to an available palette (colour) in the given library.
+/// @param      {string} $tone [base] - A reference to an available tone within a selected palette.
+/// @return     {string} colour value (HEX, RGB)
+///
+/// @example
+///     color: fetchFromLibrary($palette-merged, 'grey', 'light');
+///     color: fetchFromLibrary($palette-merged, 'blue', 'pale');
+///
+// @function fetchFromLibrary($library, $palette, $tone) {
+//     @if map-has-key($library, $palette) {
+//         @if map-has-key(map-get($library, $palette), $tone) {
+//             @return map-get(map-get($library, $palette), $tone);
+//         } @else {
+//             @warn "Palette '#{$palette}' does not contain '#{$tone}' to";
+//         }
+
+//     } @else {
+//         @warn "Palette '#{$palette}' does not exist";
+//     }
+// }
+
+/// Testing whether map-deep-get can replace fetchFromLibrary
+
+/// Map deep get
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
