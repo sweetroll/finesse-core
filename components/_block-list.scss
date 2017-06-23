@@ -19,6 +19,7 @@
     list-style: none;
 
     > li {
+        margin: 0;
         padding: $half-spacing-unit;
         border-bottom: $base-border;
     }
