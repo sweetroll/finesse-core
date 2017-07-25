@@ -1,0 +1,67 @@
+@mixin btn($color) {
+    border-color: $color;
+    background-color: $color;
+
+    &:hover {
+        background-color: darken($color, 15%);
+        border-color: darken($color, 15%);
+    }
+
+    &.btn--ghost {
+        color: $color;
+
+        &:hover {
+            color: #fff;
+            background-color: $color;
+        }
+    }
+}
+
+%btn,
+.btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: #FFF;
+    border: 1px solid;
+    border-radius: $base-border-radius;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.btn--ghost {
+        background-color: transparent;
+    }
+}
+
+%btn,
+.btn { @include btn($action-color) }
+
+%btn--info,
+.btn--info { @include btn($info-color) }
+
+%btn--success,
+.btn--success { @include btn($success-color) }
+
+%btn--warning,
+.btn--warning { @include btn($warning-color) }
+
+%btn--danger,
+.btn--danger { @include btn($danger-color) }
+
+
+// Basic modifiers without colour changes
+.btn--full {
+    width: 100%;
+}
+
+.btn--large {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.btn--small {
+    font-size: 0.85rem;
+}

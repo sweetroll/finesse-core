@@ -2,7 +2,7 @@
 /// A padded list that can contain a full-width link or any inline elements.
 ///
 /// @name block-list
-/// @group objects
+/// @group components
 ///
 /// @example
 ///     <ul class="block-list">
@@ -19,6 +19,7 @@
     list-style: none;
 
     > li {
+        margin: 0;
         padding: $half-spacing-unit;
         border-bottom: $base-border;
     }

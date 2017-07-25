@@ -1,0 +1,52 @@
+///
+/// Basic pagination object that extends '.nav'.
+///
+/// @name pagination
+/// @group components
+///
+/// @example
+///     <ol class="nav pagination">
+///         <li class="pagination__prev"><a href="#">Prev</a></li>
+///         <li><a href="#">1</a></li>
+///         <li><a href="#">2</a></li>
+///         <li class="current"><a href="#">3</a></li>
+///         <li><a href="#">4</a></li>
+///         <li><a href="#">5</a></li>
+///         <li class="pagination__next"><a href="#">Next</a></li>
+///     </ol>
+///
+
+.pagination {
+    margin: $base-spacing-unit 0;
+    text-align: center;
+}
+
+    .pagination__list {
+        margin: 0 0.25em;
+
+        a {
+            min-width: 42px; // Height of default pages to make a square
+            padding: $half-spacing-unit;
+            line-height: 1;
+            border: $base-border;
+            text-decoration: none;
+        }
+    }
+
+    .pagination__list--current {
+        a {
+            background: $base-border-color;
+        }
+    }
+
+    .pagination__prev,
+    .pagination__next {
+        margin: 0 0.25em;
+    }
+
+    .pagination__prev a:before {
+        content:"\00AB" "\00A0";
+    }
+    .pagination__next a:after {
+        content:"\00A0" "\00BB";
+    }

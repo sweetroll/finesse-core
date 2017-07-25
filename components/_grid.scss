@@ -12,7 +12,7 @@
 ///     grid--bottom - vertically align columns to the bottom
 ///
 /// @name grid
-/// @group objects
+/// @group components
 ///
 /// @example
 ///     <div class="grid">
@@ -86,5 +86,19 @@
 .grid--bottom {
     > .grid__item {
         vertical-align: bottom;
+    }
+}
+
+///
+/// Create namespaceless grid classes.
+///
+@include device-type;
+
+///
+/// Our responsive grid classes.
+///
+@each $key, $value in $breakpoints {
+    @include media-query($key) {
+       @include device-type('#{$key}-');
     }
 }

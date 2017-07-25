@@ -1,25 +1,107 @@
-///
-/// Base font styles that are a little prettier that what normalize.css gives.
-/// You would have had to override these styles anyway so why not have a crack
-/// at giving you what you need here. Any new design patterns we see in terms of
-/// typography should be reflected here.
-///
-/// The heading classes have been added here as it seems more appropriate than
-/// in objects or even generic.
-///
-
 html {
-    font-size: $base-font-size;
-    font-family: $base-font-family;
-    font-feature-settings: "kern", "liga", "pnum";
-    line-height: $base-line-height;
+    // Default font size is $base-font-size
 }
 
-body {
-    background: $base-background-color;
-    color: $base-font-color;
+h1, .alpha, %alpha {
+    font-size: 2em;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: $secondary-font-family;
+
+    @include media-query(lap-and-up) {
+        font-size: 3em;
+    }
+
+    .wysiwyg-output & {
+        margin: 1em 0 0.5em;
+    }
 }
 
-a {
-    color: $action-color;
+h2, .beta, %beta {
+    font-size: 1.75em;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: $secondary-font-family;
+
+    @include media-query(lap-and-up) {
+        font-size: 2.5em;
+        line-height: 1.25;
+    }
+
+    .wysiwyg-output & {
+        margin: 1em 0 0.5em;
+    }
+}
+
+h3, .gamma, %gamma {
+    font-size: 1.5em;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: $secondary-font-family;
+
+    @include media-query(lap-and-up) {
+        font-size: 2em;
+    }
+
+    .wysiwyg-output & {
+        margin: 1em 0 0.5em;
+    }
+}
+
+h4, .delta, %delta {
+    font-size: 1.25em;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: $secondary-font-family;
+
+    @include media-query(lap-and-up) {
+        font-size: 1.5em;
+    }
+
+    .wysiwyg-output & {
+        margin: 1em 0 0.5em;
+    }
+}
+
+h5, .epsilon, %epsilon {
+    font-size: 1.25em;
+    line-height: 1.25;
+    font-weight: 400;
+    font-family: $secondary-font-family;
+
+    .wysiwyg-output & {
+        margin: 1em 0 0.5em;
+    }
+}
+
+h6, .zeta, %zeta {
+    font-size: 1em;
+    font-weight: 400;
+    font-family: $secondary-font-family;
+
+    .wysiwyg-output & {
+        margin: 1em 0 0.5em;
+    }
+}
+
+p {
+    .wysiwyg-output & {
+        margin: 0 0 1.5em;
+    }
+}
+
+li {
+    .wysiwyg-output & {
+        display: list-item;
+        margin-left: 1.2em;
+    }
+}
+
+.wysiwyg-output {
+    > *:first-child {
+        margin-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
 }

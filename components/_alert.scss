@@ -1,0 +1,48 @@
+///
+/// Coloured notification bar that can be optionally fixed to the viewport.
+///
+/// @name alert
+/// @group components
+///
+/// @example
+///     <div class="alert">
+///         <p class="alert__text">Alert content here.</p>
+///         <div class="alert__close">&times;</div>
+///     </div>
+///
+
+@mixin alert($color) {
+    background-color: $color;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0.5em 1em;
+    color: #FFF;
+}
+
+    .alert__close {
+        width: 20px;
+        height: 20px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjx0aXRsZT5jbG9zZTwvdGl0bGU+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE4Ljk4NCA2LjQyMmwtNS41NzggNS41NzggNS41NzggNS41NzgtMS40MDYgMS40MDYtNS41NzgtNS41NzgtNS41NzggNS41NzgtMS40MDYtMS40MDYgNS41NzgtNS41NzgtNS41NzgtNS41NzggMS40MDYtMS40MDYgNS41NzggNS41NzggNS41NzgtNS41Nzh6Ij48L3BhdGg+PC9zdmc+);
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+    }
+
+.alert { @include alert($action-color) }
+.alert--info { @include alert($info-color) }
+.alert--success { @include alert($success-color) }
+.alert--warning { @include alert($warning-color) }
+.alert--danger { @include alert($danger-color) }
+
+.alert--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
